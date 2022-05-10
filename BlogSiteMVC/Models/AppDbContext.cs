@@ -18,10 +18,22 @@ namespace BlogSiteMVC.Models
         public DbSet<Topic> Topics { get; set; }
         public DbSet<UserInformation> UserInformations { get; set; }
         public DbSet<UserRegister> UserRegisters { get; set; }
+        public DbSet<UserAndTopic> UserAndTopics { get; set; }
+        public DbSet<ArticleAndTopic> ArticleAndTopics { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Entity<ArticleAndTopic>().HasKey(at => new
+            {
+                at.ArticleId,
+                at.TopicId
+            });
+
+            modelBuilder.Entity<UserAndTopic>().HasKey(at => new
+            {
+                at.UserId,
+                at.TopicId
+            });
         }
     }
 }

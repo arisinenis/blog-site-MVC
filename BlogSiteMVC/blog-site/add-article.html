@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Article</title>
+    <link rel="stylesheet" href="css/add-article.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="https://plugins.jetbrains.com/files/7083/167913/icon/pluginIcon.png"
+        type="image/x-icon">
+    <link rel="icon" href="https://plugins.jetbrains.com/files/7083/167913/icon/pluginIcon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="header-title">
+        <h1 style="margin-top: -1.5rem;color: white;font-size: 5rem;">exception.</h1>
+        <p class="header-p">Think outside of the box.</p>
+        <button class="btn-publish">Publish</button>
+        <button class="btn-draft">Save to Drafts</button>
+
+    </div>
+
+    <div class="container">
+
+        <div class="tag-section">
+            <ul id="list-tag">
+                <li><input type="checkbox" name="tag" id="Technology" class="article-tag">Technology</li>
+                <li><input type="checkbox" name="tag" id="Life" class="article-tag">Life</li>
+                <li><input type="checkbox" name="tag" id="Science" class="article-tag">Science</li>
+                <li><input type="checkbox" name="tag" id="Art" class="article-tag">Art</li>
+            </ul>
+        </div>
+
+        <div class="title-section">
+            <input type="text" placeholder="Title" id="article-title">
+        </div>
+
+        <div class="text-section">
+            <textarea name="" id="article-content" cols="30" rows="50" placeholder="Content"></textarea>
+        </div>
+
+        <div class="text-section">
+            <label for="quantity" class="total-time">Total Reading Time:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" class="nud">
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

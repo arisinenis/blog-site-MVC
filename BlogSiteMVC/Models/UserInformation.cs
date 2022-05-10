@@ -10,7 +10,6 @@ namespace BlogSiteMVC.Models
         public UserInformation()
         {
             Articles = new HashSet<Article>();
-            Topics = new HashSet<Topic>();
         }
 
         public string FirstName { get; set; }
@@ -21,7 +20,6 @@ namespace BlogSiteMVC.Models
         public UserRegister UserRegister { get; set; }
 
         public ICollection<Article> Articles { get; set; }
-        public ICollection<Topic> Topics { get; set; }
 
     }
 }

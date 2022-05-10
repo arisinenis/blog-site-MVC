@@ -9,12 +9,8 @@ namespace BlogSiteMVC.Models
     {
         public Topic()
         {
-            Articles = new HashSet<Article>();
-            UserInformations = new HashSet<UserInformation>();
         }
         public string Name { get; set; }
-
-        public ICollection<Article> Articles { get; set; }
-        public ICollection<UserInformation> UserInformations { get; set; }
+        public int TotalReading { get; set; }
     }
 }

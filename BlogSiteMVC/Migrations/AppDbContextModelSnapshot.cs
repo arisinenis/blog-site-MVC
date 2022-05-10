@@ -19,21 +19,6 @@ namespace BlogSiteMVC.Migrations
                 .HasAnnotation("ProductVersion", "5.0.16")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ArticleTopic", b =>
-                {
-                    b.Property<int>("ArticlesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TopicsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ArticlesId", "TopicsId");
-
-                    b.HasIndex("TopicsId");
-
-                    b.ToTable("ArticleTopic");
-                });
-
             modelBuilder.Entity("BlogSiteMVC.Models.Article", b =>
                 {
                     b.Property<int>("Id")
@@ -50,6 +35,9 @@ namespace BlogSiteMVC.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TotalReading")
+                        .HasColumnType("int");
+
                     b.Property<double>("TotalReadingTime")
                         .HasColumnType("float");
 
@@ -63,6 +51,21 @@ namespace BlogSiteMVC.Migrations
                     b.ToTable("Articles");
                 });
 
+            modelBuilder.Entity("BlogSiteMVC.Models.ArticleAndTopic", b =>
+                {
+                    b.Property<int>("ArticleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TopicId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ArticleId", "TopicId");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("ArticleAndTopics");
+                });
+
             modelBuilder.Entity("BlogSiteMVC.Models.Topic", b =>
                 {
                     b.Property<int>("Id")
@@ -73,9 +76,27 @@ namespace BlogSiteMVC.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TotalReading")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Topics");
+                });
+
+            modelBuilder.Entity("BlogSiteMVC.Models.UserAndTopic", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TopicId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "TopicId");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("UserAndTopics");
                 });
 
             modelBuilder.Entity("BlogSiteMVC.Models.UserInformation", b =>
@@ -129,36 +150,6 @@ namespace BlogSiteMVC.Migrations
                     b.ToTable("UserRegisters");
                 });
 
-            modelBuilder.Entity("TopicUserInformation", b =>
-                {
-                    b.Property<int>("TopicsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserInformationsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("TopicsId", "UserInformationsId");
-
-                    b.HasIndex("UserInformationsId");
-
-                    b.ToTable("TopicUserInformation");
-                });
-
-            modelBuilder.Entity("ArticleTopic", b =>
-                {
-                    b.HasOne("BlogSiteMVC.Models.Article", null)
-                        .WithMany()
-                        .HasForeignKey("ArticlesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BlogSiteMVC.Models.Topic", null)
-                        .WithMany()
-                        .HasForeignKey("TopicsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("BlogSiteMVC.Models.Article", b =>
                 {
                     b.HasOne("BlogSiteMVC.Models.UserInformation", "UserInformation")
@@ -170,6 +161,44 @@ namespace BlogSiteMVC.Migrations
                     b.Navigation("UserInformation");
                 });
 
+            modelBuilder.Entity("BlogSiteMVC.Models.ArticleAndTopic", b =>
+                {
+                    b.HasOne("BlogSiteMVC.Models.Article", "Article")
+                        .WithMany()
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BlogSiteMVC.Models.Topic", "Topic")
+                        .WithMany()
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Article");
+
+                    b.Navigation("Topic");
+                });
+
+            modelBuilder.Entity("BlogSiteMVC.Models.UserAndTopic", b =>
+                {
+                    b.HasOne("BlogSiteMVC.Models.Topic", "Topic")
+                        .WithMany()
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BlogSiteMVC.Models.UserInformation", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Topic");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("BlogSiteMVC.Models.UserInformation", b =>
                 {
                     b.HasOne("BlogSiteMVC.Models.UserRegister", "UserRegister")
@@ -179,21 +208,6 @@ namespace BlogSiteMVC.Migrations
                         .IsRequired();
 
                     b.Navigation("UserRegister");
-                });
-
-            modelBuilder.Entity("TopicUserInformation", b =>
-                {
-                    b.HasOne("BlogSiteMVC.Models.Topic", null)
-                        .WithMany()
-                        .HasForeignKey("TopicsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BlogSiteMVC.Models.UserInformation", null)
-                        .WithMany()
-                        .HasForeignKey("UserInformationsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("BlogSiteMVC.Models.UserInformation", b =>
