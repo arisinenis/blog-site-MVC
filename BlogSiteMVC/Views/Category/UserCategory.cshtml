@@ -1,17 +1,16 @@
 ﻿
 @{
-    ViewData["Title"] = "Category";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "UserCategory";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
 @section Header{
-    @await Html.PartialAsync("_VisitorHeaderLayout")
+    @await Html.PartialAsync("_UserHeaderLayout");
 }
 
 @section Footer{
-    @await Html.PartialAsync("_VisitorFooterLayout")
+    @await Html.PartialAsync("_UserFooterLayout");
 }
-
 
 <!-- s-content
     ================================================== -->
@@ -36,7 +35,7 @@
             <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                 <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
                         <img src="~/images/thumbs/masonry/lamp-400.jpg"
                              srcset="~/images/thumbs/masonry/lamp-400.jpg 1x, ~/images/thumbs/masonry/lamp-800.jpg 2x"
                              alt="">
@@ -47,10 +46,10 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 15, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 15, 2017</a>
                         </div>
                         <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">Just a Standard Format Post.</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">Just a Standard Format Post.</a>
                         </h1>
 
                     </div>
@@ -63,8 +62,8 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Design</a>
-                            <a asp-controller="Category" asp-action="Category">Photography</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Design</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Photography</a>
                         </span>
                     </div>
                 </div>
@@ -89,7 +88,7 @@
             <article class="masonry__brick entry format-standard">
 
                 <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
                         <img src="~/images/thumbs/masonry/tulips-400.jpg"
                              srcset="~/images/thumbs/masonry/tulips-400.jpg 1x, ~/images/thumbs/masonry/tulips-800.jpg 2x"
                              alt="">
@@ -100,10 +99,10 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 15, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 15, 2017</a>
                         </div>
                         <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">
+                            <a asp-controller="Article" asp-action="UserStandardFormat">
                                 10 Interesting Facts About
                                 Caffeine.
                             </a>
@@ -119,7 +118,7 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Health</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Health</a>
                         </span>
                     </div>
                 </div>
@@ -129,7 +128,7 @@
             <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                 <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
                         <img src="~/images/thumbs/masonry/cookies-400.jpg"
                              srcset="~/images/thumbs/masonry/cookies-400.jpg 1x, ~/images/thumbs/masonry/cookies-800.jpg 2x"
                              alt="">
@@ -140,9 +139,9 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 10, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 10, 2017</a>
                         </div>
-                        <h1 class="entry__title"><a asp-controller="Article" asp-action="StandardFormat">No Sugar Oatmeal Cookies.</a></h1>
+                        <h1 class="entry__title"><a asp-controller="Article" asp-action="UserStandardFormat">No Sugar Oatmeal Cookies.</a></h1>
 
                     </div>
                     <div class="entry__excerpt">
@@ -154,8 +153,8 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Cooking</a>
-                            <a asp-controller="Category" asp-action="Category">Health</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Cooking</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Health</a>
                         </span>
                     </div>
                 </div>
@@ -165,7 +164,7 @@
             <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                 <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
                         <img src="~/images/thumbs/masonry/wheel-400.jpg"
                              srcset="~/images/thumbs/masonry/wheel-400.jpg 1x, ~/images/thumbs/masonry/wheel-800.jpg 2x"
                              alt="">
@@ -176,10 +175,10 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 10, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 10, 2017</a>
                         </div>
                         <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">
+                            <a asp-controller="Article" asp-action="UserStandardFormat">
                                 Visiting Theme Parks Improves Your
                                 Health.
                             </a>
@@ -195,8 +194,8 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Health</a>
-                            <a asp-controller="Category" asp-action="Category">Lifestyle</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Health</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Lifestyle</a>
                         </span>
                     </div>
                 </div>
@@ -218,10 +217,10 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 10, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 10, 2017</a>
                         </div>
                         <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">Key Benefits Of Family Photography.</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">Key Benefits Of Family Photography.</a>
                         </h1>
 
                     </div>
@@ -234,8 +233,8 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Family</a>
-                            <a asp-controller="Category" asp-action="Category">Photography</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Family</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Photography</a>
                         </span>
                     </div>
                 </div>
@@ -245,7 +244,7 @@
             <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                 <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
                         <img src="~/images/thumbs/masonry/jump-400.jpg"
                              srcset="~/images/thumbs/masonry/jump-400.jpg 1x, ~/images/thumbs/masonry/jump-800.jpg 2x"
                              alt="">
@@ -256,10 +255,10 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 10, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 10, 2017</a>
                         </div>
                         <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">
+                            <a asp-controller="Article" asp-action="UserStandardFormat">
                                 Create Meaningful Family
                                 Moments.
                             </a>
@@ -275,8 +274,8 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Family</a>
-                            <a asp-controller="Category" asp-action="Category">Relationship</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Family</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Relationship</a>
                         </span>
                     </div>
                 </div>
@@ -286,7 +285,7 @@
             <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                 <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
                         <img src="~/images/thumbs/masonry/beetle-400.jpg"
                              srcset="~/images/thumbs/masonry/beetle-400.jpg 1x, ~/images/thumbs/masonry/beetle-800.jpg 2x"
                              alt="">
@@ -297,10 +296,10 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 10, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 10, 2017</a>
                         </div>
                         <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">Throwback To The Good Old Days.</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">Throwback To The Good Old Days.</a>
                         </h1>
 
                     </div>
@@ -313,7 +312,7 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Lifestyle</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Lifestyle</a>
                         </span>
                     </div>
                 </div>
@@ -353,10 +352,10 @@
 
             <div class="block-1-2 block-m-full popular__posts">
                 <article class="col-block popular__post">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="popular__thumb">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
                         <img src="~/images/thumbs/small/wheel-150.jpg" alt="">
                     </a>
-                    <h5><a asp-controller="Article" asp-action="StandardFormat">Visiting Theme Parks Improves Your Health.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Visiting Theme Parks Improves Your Health.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -368,10 +367,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="popular__thumb">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
                         <img src="~/images/thumbs/small/shutterbug-150.jpg" alt="">
                     </a>
-                    <h5><a asp-controller="Article" asp-action="StandardFormat">Key Benefits Of Family Photography.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Key Benefits Of Family Photography.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -383,10 +382,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="popular__thumb">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
                         <img src="~/images/thumbs/small/cookies-150.jpg" alt="">
                     </a>
-                    <h5><a asp-controller="Article" asp-action="StandardFormat">Absolutely No Sugar Oatmeal Cookies.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Absolutely No Sugar Oatmeal Cookies.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -398,10 +397,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="popular__thumb">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
                         <img src="~/images/thumbs/small/beetle-150.jpg" alt="">
                     </a>
-                    <h5><a asp-controller="Article" asp-action="StandardFormat">Throwback To The Good Old Days.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Throwback To The Good Old Days.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -413,10 +412,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="popular__thumb">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
                         <img src="~/images/thumbs/small/tulips-150.jpg" alt="">
                     </a>
-                    <h5><a asp-controller="Article" asp-action="StandardFormat">10 Interesting Facts About Caffeine.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">10 Interesting Facts About Caffeine.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -428,10 +427,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="popular__thumb">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
                         <img src="~/images/thumbs/small/salad-150.jpg" alt="">
                     </a>
-                    <h5><a asp-controller="Article" asp-action="StandardFormat">Healthy Mediterranean Salad Recipes</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Healthy Mediterranean Salad Recipes</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -478,15 +477,15 @@
             <h3>Tags</h3>
 
             <div class="tagcloud">
-                <a asp-controller="Category" asp-action="Category">Friends</a>
-                <a asp-controller="Category" asp-action="Category">Travel</a>
-                <a asp-controller="Category" asp-action="Category">Exercise</a>
-                <a asp-controller="Category" asp-action="Category">Reading</a>
-                <a asp-controller="Category" asp-action="Category">Running</a>
-                <a asp-controller="Category" asp-action="Category">Self-Help</a>
-                <a asp-controller="Category" asp-action="Category">Vacation</a>
+                <a asp-controller="Category" asp-action="UserCategory">Friends</a>
+                <a asp-controller="Category" asp-action="UserCategory">Travel</a>
+                <a asp-controller="Category" asp-action="UserCategory">Exercise</a>
+                <a asp-controller="Category" asp-action="UserCategory">Reading</a>
+                <a asp-controller="Category" asp-action="UserCategory">Running</a>
+                <a asp-controller="Category" asp-action="UserCategory">Self-Help</a>
+                <a asp-controller="Category" asp-action="UserCategory">Vacation</a>
             </div> <!-- end tagcloud -->
         </div> <!-- end tags -->
     </div> <!-- end tags-wrap -->
 
-</section> <!-- end s-extra -->
+</section>

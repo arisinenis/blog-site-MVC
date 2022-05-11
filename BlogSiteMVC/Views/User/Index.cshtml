@@ -4,6 +4,14 @@
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
+@section Header{ 
+@await Html.PartialAsync("_UserHeaderLayout");
+}
+
+@section Footer{ 
+@await Html.PartialAsync("_UserFooterLayout");
+}
+
 <section class="s-content">
 
     <div class="row masonry-wrap">
@@ -16,9 +24,9 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/lamp-400.jpg"
-                                 srcset="images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x"
+                        <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
+                            <img src="~/images/thumbs/masonry/lamp-400.jpg"
+                                 srcset="~/images/thumbs/masonry/lamp-400.jpg 1x, ~/images/thumbs/masonry/lamp-800.jpg 2x"
                                  alt="">
                         </a>
                     </div>
@@ -27,10 +35,10 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a asp-controller="Article" asp-action="UserStandardFormat">December 15, 2017</a>
                             </div>
                             <h1 class="entry__title">
-                                <a href="single-standard.html">Just a Standard Format Post.</a>
+                                <a asp-controller="Article" asp-action="UserStandardFormat">Just a Standard Format Post.</a>
                             </h1>
 
                         </div>
@@ -44,8 +52,8 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Design</a>
-                                <a href="category.html">Photography</a>
+                                <a asp-controller="Category" asp-action="UserCategory">Design</a>
+                                <a asp-controller="Category" asp-action="UserCategory">Photography</a>
                             </span>
                         </div>
                     </div>
@@ -55,9 +63,9 @@
                 <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                     <div class="entry__thumb">
-                        <a href="single-standard.html" class="entry__thumb-link">
-                            <img src="images/thumbs/masonry/tulips-400.jpg"
-                                 srcset="images/thumbs/masonry/tulips-400.jpg 1x, images/thumbs/masonry/tulips-800.jpg 2x"
+                        <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
+                            <img src="~/images/thumbs/masonry/tulips-400.jpg"
+                                 srcset="~/images/thumbs/masonry/tulips-400.jpg 1x, ~/images/thumbs/masonry/tulips-800.jpg 2x"
                                  alt="">
                         </a>
                     </div>
@@ -66,10 +74,10 @@
                         <div class="entry__header">
 
                             <div class="entry__date">
-                                <a href="single-standard.html">December 15, 2017</a>
+                                <a asp-controller="Article" asp-action="UserStandardFormat">December 15, 2017</a>
                             </div>
                             <h1 class="entry__title">
-                                <a href="single-standard.html">
+                                <a asp-controller="Article" asp-action="UserStandardFormat">
                                     10 Interesting Facts About
                                     Caffeine.
                                 </a>
@@ -86,7 +94,7 @@
                         </div>
                         <div class="entry__meta">
                             <span class="entry__meta-links">
-                                <a href="category.html">Health</a>
+                                <a asp-controller="Category" asp-action="Category">Health</a>
                             </span>
                         </div>
                     </div>
@@ -97,9 +105,9 @@
             <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
                 <div class="entry__thumb">
-                    <a href="single-standard.html" class="entry__thumb-link">
-                        <img src="images/thumbs/masonry/wheel-400.jpg"
-                             srcset="images/thumbs/masonry/wheel-400.jpg 1x, images/thumbs/masonry/wheel-800.jpg 2x"
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="entry__thumb-link">
+                        <img src="~/images/thumbs/masonry/wheel-400.jpg"
+                             srcset="~/images/thumbs/masonry/wheel-400.jpg 1x, ~/images/thumbs/masonry/wheel-800.jpg 2x"
                              alt="">
                     </a>
                 </div>
@@ -108,10 +116,10 @@
                     <div class="entry__header">
 
                         <div class="entry__date">
-                            <a href="single-standard.html">December 10, 2017</a>
+                            <a asp-controller="Article" asp-action="UserStandardFormat">December 10, 2017</a>
                         </div>
                         <h1 class="entry__title">
-                            <a href="single-standard.html">
+                            <a asp-controller="Article" asp-action="UserStandardFormat">
                                 Visiting Theme Parks Improves Your
                                 Health.
                             </a>
@@ -127,93 +135,13 @@
                     </div>
                     <div class="entry__meta">
                         <span class="entry__meta-links">
-                            <a href="#">Health</a>
-                            <a href="#">Lifestyle</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Health</a>
+                            <a asp-controller="Category" asp-action="UserCategory">Lifestyle</a>
                         </span>
                     </div>
                 </div>
 
-            </article> <!-- end article -->
-
-            <article class="masonry__brick entry format-video" data-aos="fade-up">
-
-                <div class="entry__thumb video-image">
-                    <a href="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0"
-                       data-lity>
-                        <img src="images/thumbs/masonry/shutterbug-400.jpg"
-                             srcset="images/thumbs/masonry/shutterbug-400.jpg 1x, images/thumbs/masonry/shutterbug-800.jpg 2x"
-                             alt="">
-                    </a>
-                </div>
-
-                <div class="entry__text">
-                    <div class="entry__header">
-
-                        <div class="entry__date">
-                            <a href="single-video.html">December 10, 2017</a>
-                        </div>
-                        <h1 class="entry__title">
-                            <a href="single-video.html">Key Benefits Of Family Photography.</a>
-                        </h1>
-
-                    </div>
-                    <div class="entry__excerpt">
-                        <p>
-                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                            proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                            incididunt velit sint in aliqua...
-                        </p>
-                    </div>
-                    <div class="entry__meta">
-                        <span class="entry__meta-links">
-                            <a href="category.html">Family</a>
-                            <a href="category.html">Photography</a>
-                        </span>
-                    </div>
-                </div>
-
-            </article> <!-- end article -->
-
-            <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                <div class="entry__thumb">
-                    <a href="single-standard.html" class="entry__thumb-link">
-                        <img src="images/thumbs/masonry/sydney-400.jpg"
-                             srcset="images/thumbs/masonry/sydney-400.jpg 1x, images/thumbs/masonry/sydney-800.jpg 2x"
-                             alt="">
-                    </a>
-                </div>
-
-                <div class="entry__text">
-                    <div class="entry__header">
-
-                        <div class="entry__date">
-                            <a href="single-standard.html">December 10, 2017</a>
-                        </div>
-                        <h1 class="entry__title">
-                            <a href="single-standard.html">
-                                Planning Your First Trip to
-                                Sydney.
-                            </a>
-                        </h1>
-
-                    </div>
-                    <div class="entry__excerpt">
-                        <p>
-                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                            proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                            incididunt velit sint in aliqua...
-                        </p>
-                    </div>
-                    <div class="entry__meta">
-                        <span class="entry__meta-links">
-                            <a href="category.html">Travel</a>
-                            <a href="category.html">Vacation</a>
-                        </span>
-                    </div>
-                </div>
-
-            </article> <!-- end article -->
+            </article> <!-- end article 
 
         </div> <!-- end masonry -->
     </div> <!-- end masonry-wrap -->
@@ -248,10 +176,10 @@
 
             <div class="block-1-2 block-m-full popular__posts">
                 <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/wheel-150.jpg" alt="">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
+                        <img src="~/images/thumbs/small/wheel-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Visiting Theme Parks Improves Your Health.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Visiting Theme Parks Improves Your Health.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -263,10 +191,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/shutterbug-150.jpg" alt="">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
+                        <img src="~/images/thumbs/small/shutterbug-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Key Benefits Of Family Photography.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Key Benefits Of Family Photography.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -278,10 +206,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/cookies-150.jpg" alt="">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
+                        <img src="~/images/thumbs/small/cookies-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Absolutely No Sugar Oatmeal Cookies.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Absolutely No Sugar Oatmeal Cookies.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -293,10 +221,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/beetle-150.jpg" alt="">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
+                        <img src="~/images/thumbs/small/beetle-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Throwback To The Good Old Days.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Throwback To The Good Old Days.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -308,10 +236,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/tulips-150.jpg" alt="">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
+                        <img src="~/images/thumbs/small/tulips-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">10 Interesting Facts About Caffeine.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">10 Interesting Facts About Caffeine.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -323,10 +251,10 @@
                     </section>
                 </article>
                 <article class="col-block popular__post">
-                    <a href="#0" class="popular__thumb">
-                        <img src="images/thumbs/small/salad-150.jpg" alt="">
+                    <a asp-controller="Article" asp-action="UserStandardFormat" class="popular__thumb">
+                        <img src="~/images/thumbs/small/salad-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Healthy Mediterranean Salad Recipes</a></h5>
+                    <h5><a asp-controller="Article" asp-action="UserStandardFormat">Healthy Mediterranean Salad Recipes</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -373,17 +301,10 @@
             <h3>Your Favorite Tags. <a href="#">Click here for add new tags.</a></h3>
 
             <div class="tagcloud">
-                <a href="#0">Salad</a>
-                <a href="#0">Recipe</a>
-                <a href="#0">Places</a>
-                <a href="#0">Tips</a>
-                <!-- <a href="#0">Friends</a>
-                <a href="#0">Travel</a>
-                <a href="#0">Exercise</a>
-                <a href="#0">Reading</a>
-                <a href="#0">Running</a>
-                <a href="#0">Self-Help</a>
-                <a href="#0">Vacation</a> -->
+                <a asp-controller="Category" asp-action="UserCategory">Salad</a>
+                <a asp-controller="Category" asp-action="UserCategory">Recipe</a>
+                <a asp-controller="Category" asp-action="UserCategory">Places</a>
+                <a asp-controller="Category" asp-action="UserCategory">Tips</a>
             </div> <!-- end tagcloud -->
         </div> <!-- end tags -->
     </div> <!-- end tags-wrap -->

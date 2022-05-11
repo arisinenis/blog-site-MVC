@@ -1,15 +1,17 @@
 ﻿
 @{
     ViewData["Title"] = "About";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
+
+
 @section Header{
-    @await Html.PartialAsync("_VisitorHeaderLayout")
+    @await Html.PartialAsync("_UserHeaderLayout");
 }
 
 @section Footer{
-    @await Html.PartialAsync("_VisitorFooterLayout")
+    @await Html.PartialAsync("_UserFooterLayout");
 }
 
 <!-- s-content
@@ -239,13 +241,13 @@
             <h3>Tags</h3>
 
             <div class="tagcloud">
-                <a asp-controller="Category" asp-action="Category">Friends</a>
-                <a asp-controller="Category" asp-action="Category">Travel</a>
-                <a asp-controller="Category" asp-action="Category">Exercise</a>
-                <a asp-controller="Category" asp-action="Category">Reading</a>
-                <a asp-controller="Category" asp-action="Category">Running</a>
-                <a asp-controller="Category" asp-action="Category">Self-Help</a>
-                <a asp-controller="Category" asp-action="Category">Vacation</a>
+                <a asp-controller="Category" asp-action="UserCategory">Friends</a>
+                <a asp-controller="Category" asp-action="UserCategory">Travel</a>
+                <a asp-controller="Category" asp-action="UserCategory">Exercise</a>
+                <a asp-controller="Category" asp-action="UserCategory">Reading</a>
+                <a asp-controller="Category" asp-action="UserCategory">Running</a>
+                <a asp-controller="Category" asp-action="UserCategory">Self-Help</a>
+                <a asp-controller="Category" asp-action="UserCategory">Vacation</a>
             </div> <!-- end tagcloud -->
         </div> <!-- end tags -->
     </div> <!-- end tags-wrap -->

@@ -12,5 +12,14 @@ namespace BlogSiteMVC.Controllers
         {
             return View();
         }
+        public IActionResult UserStandardFormat()
+        {
+            return View();
+        }
+
+        public IActionResult WriteArticle()
+        {
+            return View();
+        }
     }
 }

@@ -32,7 +32,7 @@
 <body>
     <!-- pageheader
     ================================================== -->
-    <section class="s-pageheader s-pageheader--home">
+    <!--<section class="s-pageheader s-pageheader--home">
 
         <header class="header">
             <div class="header__content row">
@@ -40,77 +40,76 @@
                 <div class="header__logo">
                     <h1 style="margin-top: -1.5rem;color: white;font-size: 5rem;">exception.</h1>
                 </div> <!-- end header__logo -->
+    <!--<ul class="header__social">
+        <li>
+            <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#0"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+        </li>
+    </ul>-->
+    <!-- end header__social -->
+    <!--<a class="header__search-trigger" href="#0"></a>
 
-                <ul class="header__social">
-                    <li>
-                        <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    </li>
-                </ul> <!-- end header__social -->
+    <div class="header__search">
 
-                <a class="header__search-trigger" href="#0"></a>
+        <form role="search" method="get" class="header__search-form" action="#">
+            <label>
+                <span class="hide-content">Search for:</span>
+                <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s"
+                       title="Search for:" autocomplete="off">
+            </label>
+            <input type="submit" class="search-submit" value="Search">
+        </form>
 
-                <div class="header__search">
+        <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
 
-                    <form role="search" method="get" class="header__search-form" action="#">
-                        <label>
-                            <span class="hide-content">Search for:</span>
-                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s"
-                                   title="Search for:" autocomplete="off">
-                        </label>
-                        <input type="submit" class="search-submit" value="Search">
-                    </form>
+    </div>-->
+    <!-- end header__search -->
+    <!--<a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
 
-                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+    <nav class="header__nav-wrap">
 
-                </div> <!-- end header__search -->
+        <h2 class="header__nav-heading h6">Site Navigation</h2>
 
+        <ul class="header__nav">
+            <li class="current"><a href="index.html" title="">Home</a></li>
+            <li class="has-children">
+                <a href="#0" title="">Categories</a>
+                <ul class="sub-menu">
+                    <li><a asp-controller="Category" asp-action="Category">Lifestyle</a></li>
+                    <li><a asp-controller="Category" asp-action="Category">Health</a></li>
+                    <li><a asp-controller="Category" asp-action="Category">Family</a></li>
+                    <li><a asp-controller="Category" asp-action="Category">Management</a></li>
+                    <li><a asp-controller="Category" asp-action="Category">Travel</a></li>
+                    <li><a asp-controller="Category" asp-action="Category">Work</a></li>
+                </ul>
+            </li>
+            <li><a asp-controller="Home" asp-action="About" title="">About</a></li>-->
+    @* Bu kısım düzeltilecek. *@
+    <!--<li><a href="add-article.html" title="">Write Something</a></li>-->
+    @*<li><a href="drafts.html" title="">Drafts</a></li>*@
+    @*<li><a href="settings.html" title="">Settings</a></li>
+    <li><a href="#" title="">Log Out</a></li>-->*@
 
-                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+    <!-- <li><a href="contact.html" title="">Contact</a></li> -->
+    <!--</ul>--> <!-- end header__nav -->
+    <!--<a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
 
-                <nav class="header__nav-wrap">
+    </nav>-->
+    <!-- end header__nav-wrap -->
+    <!--</div>--> <!-- header-content -->
+    <!--</header>--> <!-- header -->
+    <!--</section>--> <!-- end s-pageheader -->
 
-                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+    @RenderSection("Header", required: false);
 
-                    <ul class="header__nav">
-                        <li class="current"><a href="index.html" title="">Home</a></li>
-                        <li class="has-children">
-                            <a href="#0" title="">Categories</a>
-                            <ul class="sub-menu">
-                                <li><a href="category.html">Lifestyle</a></li>
-                                <li><a href="category.html">Health</a></li>
-                                <li><a href="category.html">Family</a></li>
-                                <li><a href="category.html">Management</a></li>
-                                <li><a href="category.html">Travel</a></li>
-                                <li><a href="category.html">Work</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html" title="">About</a></li>
-                        <li><a href="add-article.html" title="">Write Something</a></li>
-                        <li><a href="drafts.html" title="">Drafts</a></li>
-                        <li><a href="settings.html" title="">Settings</a></li>
-                        <li><a href="#" title="">Log Out</a></li>
-
-                        <!-- <li><a href="contact.html" title="">Contact</a></li> -->
-                    </ul> <!-- end header__nav -->
-
-                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
-
-                </nav> <!-- end header__nav-wrap -->
-
-            </div> <!-- header-content -->
-        </header> <!-- header -->
-
-
-    </section> <!-- end s-pageheader -->
     @* Body Section Start *@
 
     <div class="container">
@@ -121,10 +120,11 @@
 
     @* Body Section End *@
 
+    @RenderSection("Footer", required: false);
 
     <!-- s-footer
     ================================================== -->
-    <footer class="s-footer">
+    <!--<footer class="s-footer">
 
         <div class="s-footer__main">
             <div class="row">
@@ -138,68 +138,68 @@
                         <li><a asp-controller="Home" asp-action="Blog">About</a></li>
                     </ul>
 
-                </div> <!-- end s-footer__sitelinks -->
+                </div>-->
+    <!-- end s-footer__sitelinks -->
+    <!--<div class="col-two md-four mob-full s-footer__social">
 
-                <div class="col-two md-four mob-full s-footer__social">
+        <h4>Social</h4>
 
-                    <h4>Social</h4>
+        <ul class="s-footer__linklist">
+            <li><a href="#0">Facebook</a></li>
+            <li><a href="#0">Instagram</a></li>
+            <li><a href="#0">Twitter</a></li>
+            <li><a href="#0">Pinterest</a></li>
+            <li><a href="#0">Google+</a></li>
+            <li><a href="#0">LinkedIn</a></li>
+        </ul>
 
-                    <ul class="s-footer__linklist">
-                        <li><a href="#0">Facebook</a></li>
-                        <li><a href="#0">Instagram</a></li>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">Pinterest</a></li>
-                        <li><a href="#0">Google+</a></li>
-                        <li><a href="#0">LinkedIn</a></li>
-                    </ul>
+    </div>-->
+    <!-- end s-footer__social -->
+    <!--<div class="col-five md-full end s-footer__subscribe">
 
-                </div> <!-- end s-footer__social -->
+        <h4>Our Newsletter</h4>
 
-                <div class="col-five md-full end s-footer__subscribe">
+        <p>
+            Sit vel delectus amet officiis repudiandae est voluptatem. Tempora maxime provident nisi et fuga
+            et enim exercitationem ipsam. Culpa consequatur occaecati.
+        </p>
 
-                    <h4>Our Newsletter</h4>
+        <div class="subscribe-form">
+            <form id="mc-form" class="group" novalidate="true">
 
-                    <p>
-                        Sit vel delectus amet officiis repudiandae est voluptatem. Tempora maxime provident nisi et fuga
-                        et enim exercitationem ipsam. Culpa consequatur occaecati.
-                    </p>
+                <input type="email" value="" name="EMAIL" class="email" id="mc-email"
+                       placeholder="Email Address" required="">
 
-                    <div class="subscribe-form">
-                        <form id="mc-form" class="group" novalidate="true">
+                <input type="submit" name="subscribe" value="Send">
 
-                            <input type="email" value="" name="EMAIL" class="email" id="mc-email"
-                                   placeholder="Email Address" required="">
+                <label for="mc-email" class="subscribe-message"></label>
 
-                            <input type="submit" name="subscribe" value="Send">
+            </form>
+        </div>
 
-                            <label for="mc-email" class="subscribe-message"></label>
+    </div>-->
+    <!-- end s-footer__subscribe -->
+    <!--</div>
+    </div>-->
+    <!-- end s-footer__main -->
+    <!--<div class="s-footer__bottom">
+        <div class="row">
+            <div class="col-full">
+                <div class="s-footer__copyright">
+                    <span>© Copyright Exception 2022</span>
+                </div>
 
-                        </form>
-                    </div>
-
-                </div> <!-- end s-footer__subscribe -->
-
-            </div>
-        </div> <!-- end s-footer__main -->
-
-        <div class="s-footer__bottom">
-            <div class="row">
-                <div class="col-full">
-                    <div class="s-footer__copyright">
-                        <span>© Copyright Exception 2022</span>
-                    </div>
-
-                    <div class="go-top">
-                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
-                    </div>
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"></a>
                 </div>
             </div>
-        </div> <!-- end s-footer__bottom -->
-
-    </footer> <!-- end s-footer -->
+        </div>
+    </div>-->
+    <!-- end s-footer__bottom -->
+    <!--</footer>--> <!-- end s-footer -->
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
+    <!--<div id="preloader">
         <div id="loader">
             <div class="line-scale">
                 <div></div>
@@ -209,9 +209,7 @@
                 <div></div>
             </div>
         </div>
-    </div>
-
-
+    </div>-->
     <!-- Java Script
     ================================================== -->
     <script src="~/js/jquery-3.2.1.min.js"></script>
