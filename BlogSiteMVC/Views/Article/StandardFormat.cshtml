@@ -18,8 +18,8 @@
                 <li class="date">December 16, 2017</li>
                 <li class="cat">
                     In
-                    <a href="#0">Lifestyle</a>
-                    <a href="#0">Travel</a>
+                    <a asp-controller="Category" asp-action="Category">Lifestyle</a>
+                    <a asp-controller="Category" asp-action="Category">Travel</a>
                 </li>
                 <li class="reading-time">2 Min Read </li>
             </ul>
@@ -134,10 +134,10 @@
                 <span>Post Tags</span>
 
                 <span class="s-content__tag-list">
-                    <a href="#0">orci</a>
-                    <a href="#0">lectus</a>
-                    <a href="#0">varius</a>
-                    <a href="#0">turpis</a>
+                    <a asp-controller="Category" asp-action="Category">orci</a>
+                    <a asp-controller="Category" asp-action="Category">lectus</a>
+                    <a asp-controller="Category" asp-action="Category">varius</a>
+                    <a asp-controller="Category" asp-action="Category">turpis</a>
                 </span>
             </p> <!-- end s-content__tags -->
 
@@ -167,13 +167,13 @@
             <div class="s-content__pagenav">
                 <div class="s-content__nav">
                     <div class="s-content__prev">
-                        <a href="#0" rel="prev">
+                        <a asp-controller="Article" asp-action="StandardFormat" rel="prev">
                             <span>Previous Post</span>
                             Tips on Minimalist Design
                         </a>
                     </div>
                     <div class="s-content__next">
-                        <a href="#0" rel="next">
+                        <a asp-controller="Article" asp-action="StandardFormat" rel="next">
                             <span>Next Post</span>
                             Less Is More
                         </a>
@@ -414,7 +414,7 @@
                     <a href="#0" class="popular__thumb">
                         <img src="~/images/thumbs/small/wheel-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Visiting Theme Parks Improves Your Health.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="StandardFormat">Visiting Theme Parks Improves Your Health.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -429,7 +429,7 @@
                     <a href="#0" class="popular__thumb">
                         <img src="~/images/thumbs/small/shutterbug-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Key Benefits Of Family Photography.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="StandardFormat">Key Benefits Of Family Photography.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -444,7 +444,7 @@
                     <a href="#0" class="popular__thumb">
                         <img src="~/images/thumbs/small/cookies-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Absolutely No Sugar Oatmeal Cookies.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="StandardFormat">Absolutely No Sugar Oatmeal Cookies.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -459,7 +459,7 @@
                     <a href="#0" class="popular__thumb">
                         <img src="~/images/thumbs/small/beetle-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Throwback To The Good Old Days.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="StandardFormat">Throwback To The Good Old Days.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -474,7 +474,7 @@
                     <a href="#0" class="popular__thumb">
                         <img src="~/images/thumbs/small/tulips-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">10 Interesting Facts About Caffeine.</a></h5>
+                    <h5><a asp-controller="Article" asp-action="StandardFormat">10 Interesting Facts About Caffeine.</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -489,7 +489,7 @@
                     <a href="#0" class="popular__thumb">
                         <img src="~/images/thumbs/small/salad-150.jpg" alt="">
                     </a>
-                    <h5><a href="#0">Healthy Mediterranean Salad Recipes</a></h5>
+                    <h5><a asp-controller="Article" asp-action="StandardFormat">Healthy Mediterranean Salad Recipes</a></h5>
                     <section class="popular__meta">
                         <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                         <span class="popular__date">
@@ -536,17 +536,12 @@
             <h3>Tags</h3>
 
             <div class="tagcloud">
-                <a href="#0">Salad</a>
-                <a href="#0">Recipe</a>
-                <a href="#0">Places</a>
-                <a href="#0">Tips</a>
-                <a href="#0">Friends</a>
-                <a href="#0">Travel</a>
-                <a href="#0">Exercise</a>
-                <a href="#0">Reading</a>
-                <a href="#0">Running</a>
-                <a href="#0">Self-Help</a>
-                <a href="#0">Vacation</a>
+                <a asp-controller="Category" asp-action="Category">Places</a>
+                <a asp-controller="Category" asp-action="Category">Friends</a>
+                <a asp-controller="Category" asp-action="Category">Travel</a>
+                <a asp-controller="Category" asp-action="Category">Exercise</a>
+                <a asp-controller="Category" asp-action="Category">Reading</a>
+                <a asp-controller="Category" asp-action="Category">Vacation</a>
             </div> <!-- end tagcloud -->
         </div> <!-- end tags -->
     </div> <!-- end tags-wrap -->

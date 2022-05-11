@@ -8,7 +8,7 @@ namespace BlogSiteMVC.Controllers
 {
     public class ArticleController : Controller
     {
-        public IActionResult Index()
+        public IActionResult StandardFormat()
         {
             return View();
         }

@@ -28,21 +28,6 @@ namespace BlogSiteMVC.Controllers
             return View();
         }
 
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        public IActionResult SignUp()
-        {
-            return View();
-        }
-
-        public IActionResult StandardFormatPost()
-        {
-            return View();
-        }
-
         public IActionResult Privacy()
         {
             return View();
