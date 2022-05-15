@@ -5,12 +5,197 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.16" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.16" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.16">
+    <None Include="wwwroot\css\add-article.css" />
+    <None Include="wwwroot\css\base.css" />
+    <None Include="wwwroot\css\font-awesome\css\font-awesome.css" />
+    <None Include="wwwroot\css\font-awesome\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\css\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\css\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\css\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\css\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\css\fonts.css" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-bold-webfont.woff" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-bold-webfont.woff2" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-italic-webfont.woff" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-italic-webfont.woff2" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-regular-webfont.woff" />
+    <None Include="wwwroot\fonts\librebaskerville\librebaskerville-regular-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-black-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-black-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-black-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-blackitalic-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-blackitalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-blackitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-bold-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-bold-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-bold-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-bolditalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-bolditalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extrabold-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extrabold-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extrabolditalic-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extrabolditalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extrabolditalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extralight-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extralight-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extralight-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extralightitalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-extralightitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-light-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-light-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-lightitalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-lightitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-medium-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-medium-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-medium-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-mediumitalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-mediumitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-regular-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-regular-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-regular-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-regularitalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-regularitalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibold-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibold-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibold-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibolditalic-webfont.ttf" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibolditalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-semibolditalic-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-thin-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-thin-webfont.woff2" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-thinitalic-webfont.woff" />
+    <None Include="wwwroot\fonts\metropolis\metropolis-thinitalic-webfont.woff2" />
+    <None Include="wwwroot\images\avatars\user-01.jpg" />
+    <None Include="wwwroot\images\avatars\user-02.jpg" />
+    <None Include="wwwroot\images\avatars\user-03.jpg" />
+    <None Include="wwwroot\images\avatars\user-04.jpg" />
+    <None Include="wwwroot\images\avatars\user-05.jpg" />
+    <None Include="wwwroot\images\hero-bg.jpg" />
+    <None Include="wwwroot\images\icon-location%402x.png" />
+    <None Include="wwwroot\images\icon-location.png" />
+    <None Include="wwwroot\images\icons\icon-arrow-left-w.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-left.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-right-w.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-right.svg" />
+    <None Include="wwwroot\images\icons\icon-arrow-up.svg" />
+    <None Include="wwwroot\images\icons\icon-link.svg" />
+    <None Include="wwwroot\images\icons\icon-mail.svg" />
+    <None Include="wwwroot\images\icons\icon-quote.svg" />
+    <None Include="wwwroot\images\icons\icon-search.svg" />
+    <None Include="wwwroot\images\icons\icon-video.svg" />
+    <None Include="wwwroot\images\icons\png\icon-arrow-left-w.png" />
+    <None Include="wwwroot\images\icons\png\icon-arrow-left.png" />
+    <None Include="wwwroot\images\icons\png\icon-arrow-right-w.png" />
+    <None Include="wwwroot\images\icons\png\icon-arrow-right.png" />
+    <None Include="wwwroot\images\icons\png\icon-arrow-up.png" />
+    <None Include="wwwroot\images\icons\png\icon-link.png" />
+    <None Include="wwwroot\images\icons\png\icon-mail.png" />
+    <None Include="wwwroot\images\icons\png\icon-quote.png" />
+    <None Include="wwwroot\images\icons\png\icon-search.png" />
+    <None Include="wwwroot\images\icons\png\icon-video.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\logo.svg" />
+    <None Include="wwwroot\images\mejs\mejs-controls.png" />
+    <None Include="wwwroot\images\mejs\mejs-controls.svg" />
+    <None Include="wwwroot\images\sample-image.jpg" />
+    <None Include="wwwroot\images\thumbs\about\about-1000.jpg" />
+    <None Include="wwwroot\images\thumbs\about\about-2000.jpg" />
+    <None Include="wwwroot\images\thumbs\about\about-500.jpg" />
+    <None Include="wwwroot\images\thumbs\featured\featured-beetle.jpg" />
+    <None Include="wwwroot\images\thumbs\featured\featured-guitarman.jpg" />
+    <None Include="wwwroot\images\thumbs\featured\featured-watch.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\beetle-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\beetle-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\cookies-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\cookies-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\fuji-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\fuji-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\gallery\gallery-1-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\gallery\gallery-1-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\gallery\gallery-2-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\gallery\gallery-2-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\gallery\gallery-3-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\gallery\gallery-3-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\guitarman-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\guitarman-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\jump-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\jump-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\lamp-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\lamp-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\shutterbug-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\shutterbug-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\sydney-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\sydney-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\tulips-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\tulips-800.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\wheel-400.jpg" />
+    <None Include="wwwroot\images\thumbs\masonry\wheel-800.jpg" />
+    <None Include="wwwroot\images\thumbs\single\audio\audio-1000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\audio\audio-2000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\audio\audio-500.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-01-1000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-01-2000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-01-500.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-02-1000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-02-2000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-02-500.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-03-1000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-03-2000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\gallery\single-gallery-03-500.jpg" />
+    <None Include="wwwroot\images\thumbs\single\standard\standard-1000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\standard\standard-2000.jpg" />
+    <None Include="wwwroot\images\thumbs\single\standard\standard-500.jpg" />
+    <None Include="wwwroot\images\thumbs\small\beetle-150.jpg" />
+    <None Include="wwwroot\images\thumbs\small\cookies-150.jpg" />
+    <None Include="wwwroot\images\thumbs\small\salad-150.jpg" />
+    <None Include="wwwroot\images\thumbs\small\shutterbug-150.jpg" />
+    <None Include="wwwroot\images\thumbs\small\tulips-150.jpg" />
+    <None Include="wwwroot\images\thumbs\small\wheel-150.jpg" />
+    <None Include="wwwroot\images\wheel-1000.jpg" />
+    <None Include="wwwroot\images\wheel-2000.jpg" />
+    <None Include="wwwroot\images\wheel-500.jpg" />
+    <None Include="wwwroot\js\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\modernizr.js" />
+    <None Include="wwwroot\js\pace.min.js" />
+    <None Include="wwwroot\js\plugins.js" />
+    <None Include="wwwroot\css\main.css" />
+    <None Include="wwwroot\media\AirReview-Landmarks-02-ChasingCorporate.mp3" />
+    <None Include="wwwroot\css\settings.css" />
+    <None Include="wwwroot\css\sign-up.css" />
+    <None Include="wwwroot\css\topics.css" />
+    <None Include="wwwroot\css\vendor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\lib\bootstrap\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\js\" />
+    <Folder Include="wwwroot\lib\jquery-validation-unobtrusive\" />
+    <Folder Include="wwwroot\lib\jquery-validation\" />
+    <Folder Include="wwwroot\lib\jquery-validation\dist\" />
+    <Folder Include="wwwroot\lib\jquery\" />
+    <Folder Include="wwwroot\lib\jquery\dist\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

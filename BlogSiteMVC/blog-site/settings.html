@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="css/add-article.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="https://plugins.jetbrains.com/files/7083/167913/icon/pluginIcon.png"
+        type="image/x-icon">
+    <link rel="icon" href="https://plugins.jetbrains.com/files/7083/167913/icon/pluginIcon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="header-title">
+        <h1 style="margin-top: -1.5rem;color: white;font-size: 5rem;"><a href="user-mainpage.html">exception.</a></h1>
+        <p class="header-p">Think outside of the box.</p>
+        <p style="margin-bottom: 3rem;font-weight:bolder;color:white;">You can change your personal information.</p>
+    </div>
+
+    <div class="container">
+        <div class="name-surname">
+            <h2 class="header-name">Name - Surname</h2>
+            <hr class="header-hr">
+            <div class="user-input-flex">
+                <input type="text" name="nameSurname" class="header-input" value="Name Surname">
+                <button class="btn-save">Save</button>
+            </div>
+        </div>
+
+        <div class="description-section" style="margin-top: 2rem;">
+            <h2 class="header-name">Description</h2>
+            <hr class="header-hr">
+            <div class="user-input-flex">
+                <textarea name="description" id="" cols="100" rows="5" class="description"></textarea>
+                <button class="btn-save">Save</button>
+            </div>
+        </div>
+
+        <div class="picture-section description-section" style="margin-top: 2rem;">
+            <h2 class="header-name">Change Picture</h2>
+            <hr class="header-hr">
+            <div class="user-input-flex">
+                <input type="file" id="files" name="files" multiple>
+                <button class="btn-save">Save</button>
+            </div>
+        </div>
+
+        <div class="username-section description-section" style="margin-top: 2rem;">
+            <h2 class="header-name">Username</h2>
+            <hr class="header-hr">
+            <div class="user-input-flex">
+                <input type="text" name="userName" class="header-input" value="Username">
+                <input type="text" name="urlInfo" class="header-input" value="Url information" readonly>
+                <button class="btn-save">Save</button>
+
+            </div>
+        </div>
+
+        <div class="email-section description-section" style="margin-top: 2rem;">
+            <h2 class="header-name">Email</h2>
+            <hr class="header-hr">
+            <div class="user-input-flex">
+                <input type="text" name="email" class="header-input" value="Email">
+                <button class="btn-save">Save</button>
+            </div>
+        </div>
+
+        <div class="delete-section description-section" style="margin-top: 2rem;">
+            <h2 class="header-name">Delete Account</h2>
+            <hr class="header-hr">
+            <div class="user-input-flex">
+                <p class="delete-section">Are you sure?</p>
+                <button class="btn-save" style="width: 8rem;">Delete Account</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

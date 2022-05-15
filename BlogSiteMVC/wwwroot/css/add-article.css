@@ -1,0 +1,78 @@
+body {
+  background-color: #151515;
+  font-family: "librebaskerville-regular";
+}
+
+.header-title {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.header-p {
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#list-tag {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  list-style-type: none;
+  color: white;
+  margin-left: 20rem;
+}
+
+#article-title {
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 50%;
+  margin-bottom: 2rem;
+  background-color: #151515;
+  color: white;
+}
+
+#article-content {
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 50%;
+  margin-bottom: 2rem;
+  background-color: #151515;
+  color: white;
+}
+
+.btn-publish,
+.btn-draft {
+  width: 10%;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #151515;
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+  border-radius: 2rem;
+}
+
+.btn-publish:hover,
+.btn-draft:hover {
+  background-color: darkcyan;
+  transition: 0.75s;
+}
+
+/* Total Reading Time */
+
+.total-time {
+  color: white;
+}
+
+.nud {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}

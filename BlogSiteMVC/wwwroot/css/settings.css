@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151515;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+}
+
+h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-p {
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.header-name {
+  color: white;
+  text-align: left;
+}
+
+.user-input-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.header-input {
+  padding: 0.5rem;
+  font-weight: bolder;
+  width: 400px;
+}
+
+.btn-save {
+  width: 100px;
+  border-radius: 1rem;
+  background-color: #151515;
+  font-weight: bolder;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-save:hover {
+  background-color: red;
+  transition: 0.5s;
+}
+
+.description {
+  padding: 0.5rem;
+  font-weight: bolder;
+}
+
+.description-section .btn-save {
+  height: 34px;
+}
+
+.delete-section {
+  color: white;
+}

@@ -1,4 +1,6 @@
 using BlogSiteMVC.Models;
+using DataAccess.Context;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +26,9 @@ namespace BlogSiteMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddMvc();
+            // Validation resultlar ModelState getirecek.
+            services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BlogSiteDbConStr")));
         }
 
