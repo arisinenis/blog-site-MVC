@@ -12,7 +12,7 @@ namespace Business.Concrete
 {
     public class ArticleService : IArticleService
     {
-        AppDbContext db;
+        private readonly AppDbContext db;
         ArticleRepository _articleRepository;
         public ArticleService()
         {
