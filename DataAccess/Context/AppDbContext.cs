@@ -14,7 +14,6 @@ namespace DataAccess.Context
 
         }
 
-
         public DbSet<Article> Articles { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<UserInformation> UserInformations { get; set; }

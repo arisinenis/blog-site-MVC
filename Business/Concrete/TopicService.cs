@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Core.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Context;
 using DataAccess.Repositories;
 using System;
@@ -12,11 +13,10 @@ namespace Business.Concrete
 {
     public class TopicService : ITopicService
     {
-        private readonly AppDbContext db;
-        TopicRepository _topicRepository;
-        public TopicService()
+        private readonly ITopicRepository _topicRepository;
+        public TopicService(ITopicRepository _topicRepository)
         {
-            _topicRepository = new TopicRepository(db);
+            this._topicRepository = _topicRepository;
         }
         public bool Add(Topic entity)
         {

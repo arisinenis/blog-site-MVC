@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace Core.Concrete
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [NotMapped]
         public byte[] Picture { get; set; }
         public string Description { get; set; }
         public int UserRegisterId { get; set; }

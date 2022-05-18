@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Core.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Context;
 using DataAccess.Repositories;
 using System;
@@ -12,11 +13,10 @@ namespace Business.Concrete
 {
     public class UserInformationService : IUserInformationService
     {
-        private readonly AppDbContext db;
-        UserInformationRepository _userInformationRepository;
-        public UserInformationService()
+        private readonly IUserInformationRepository _userInformationRepository;
+        public UserInformationService(IUserInformationRepository _userInformationRepository)
         {
-            _userInformationRepository = new UserInformationRepository(db);
+            this._userInformationRepository = _userInformationRepository;
         }
         public bool Add(UserInformation entity)
         {

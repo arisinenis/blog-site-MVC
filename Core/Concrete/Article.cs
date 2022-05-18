@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,8 +14,8 @@ namespace Core.Concrete
         }
         public string Title { get; set; }
         public string Content { get; set; }
-        public DateTime Date { get; set; }
-        public int TotalReading { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now.Date;
+        //public int TotalReading { get; set; }
         public double TotalReadingTime { get; set; }
 
         public int UserInformationId { get; set; }
