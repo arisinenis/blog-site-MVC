@@ -12,6 +12,7 @@ namespace BlogSiteMVC.Models
         {
             Topics = new HashSet<Topic>();
         }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public double TotalReadingTime { get; set; }

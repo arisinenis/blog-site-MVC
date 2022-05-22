@@ -21,5 +21,10 @@ namespace DataAccess.Repositories
         {
             return db.Articles.Include(a => a.UserInformation).FirstOrDefault(a => a.Id == id);
         }
+
+        public IEnumerable<Article> GetArticlesIncludeTopics()
+        {
+            return db.Articles.Include(a => a.Topics).ToList();
+        }
     }
 }

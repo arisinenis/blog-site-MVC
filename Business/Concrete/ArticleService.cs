@@ -41,6 +41,11 @@ namespace Business.Concrete
             return articleRepository.GetArticleIncludeUser(id);
         }
 
+        public IEnumerable<Article> GetArticlesIncludeTopics()
+        {
+            return articleRepository.GetArticlesIncludeTopics();
+        }
+
         public Article GetById(int id)
         {
             return articleRepository.GetById(id);

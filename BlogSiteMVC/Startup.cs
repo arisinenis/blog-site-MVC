@@ -33,6 +33,7 @@ namespace BlogSiteMVC
         {
             services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddAutoMapper(typeof(Startup));
+            services.AddSession();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BlogSiteDbConStr")));
 
             // Buralar deðiþecek.
@@ -62,6 +63,9 @@ namespace BlogSiteMVC
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseSession();
+
             app.UseStaticFiles();
 
             app.UseRouting();

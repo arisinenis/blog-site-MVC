@@ -18,6 +18,12 @@ namespace BlogSiteMVC.Controllers
             return View();
         }
 
+        public IActionResult LogOut()
+        {
+            HttpContext.Session.Remove("email");
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult SignUp()
         {
             return View();

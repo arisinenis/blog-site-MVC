@@ -9,5 +9,6 @@ namespace DataAccess.Abstract
     public interface IArticleRepository : IBaseRepository<Article>
     {
         Article GetArticleIncludeUser(int id);
+        IEnumerable<Article> GetArticlesIncludeTopics();
     }
 }

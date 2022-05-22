@@ -38,6 +38,11 @@ namespace Business.Concrete
             return _topicRepository.GetById(id);
         }
 
+        public Topic GetTopicIncludeArticles(int id)
+        {
+            return _topicRepository.GetTopicIncludeArticles(id);
+        }
+
         public bool Update(Topic entity)
         {
             return _topicRepository.Update(entity);

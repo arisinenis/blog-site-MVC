@@ -12,8 +12,21 @@ namespace BlogSiteMVC.Models
         public MappingProfile()
         {
             //Simetrik olarak eşleştirme yapıyoruz.
+
             CreateMap<ArticleCreateVM, Article>();
             CreateMap<Article, ArticleCreateVM>();
+
+            CreateMap<ArticleShowMainPageVM, Article>();
+            CreateMap<Article, ArticleShowMainPageVM>();
+
+            CreateMap<ArticleAndUserVM, Article>();
+            CreateMap<Article, ArticleAndUserVM>();
+
+            CreateMap<UserInformation, UserInformationVM>();
+            CreateMap<UserInformationVM, UserInformation>();
+
+            CreateMap<Topic, TopicAndArticleVM>();
+            CreateMap<TopicAndArticleVM, Topic>();
         }
     }
 }

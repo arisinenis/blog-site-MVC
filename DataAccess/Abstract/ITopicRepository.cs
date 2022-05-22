@@ -8,6 +8,6 @@ namespace DataAccess.Abstract
 {
     public interface ITopicRepository : IBaseRepository<Topic>
     {
-        
+        Topic GetTopicIncludeArticles(int id);
     }
 }

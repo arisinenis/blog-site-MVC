@@ -10,5 +10,6 @@ namespace Business.Abstract
     public interface IArticleService : IBaseService<Article>
     {
         Article GetArticleIncludeUser(int id);
+        IEnumerable<Article> GetArticlesIncludeTopics();
     }
 }

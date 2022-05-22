@@ -13,20 +13,26 @@ namespace BlogSiteMVC.Controllers
     public class ArticleController : Controller
     {
         private readonly IArticleService articleService;
+        private readonly IUserInformationService userInformationService;
         private readonly IMapper mapper;
 
-        public ArticleController(IArticleService articleService, IMapper mapper)
+        public ArticleController(IArticleService articleService, IMapper mapper, IUserInformationService userInformationService)
         {
             this.articleService = articleService;
+            this.userInformationService = userInformationService;
             this.mapper = mapper;
         }
-        public IActionResult StandardFormat()
+
+        public IActionResult StandardFormat(int id)
         {
-            return View();
-        }
-        public IActionResult UserStandardFormat()
-        {
-            return View();
+            ArticleAndUserVM articleAndUserVM = new ArticleAndUserVM();
+            Article article = mapper.Map<Article>(articleAndUserVM);
+
+            articleAndUserVM.Article = articleService.GetArticleIncludeUser(id);
+            UserInformation userInformation = userInformationService.GetById(articleAndUserVM.Article.UserInformationId);
+            articleAndUserVM.UserInformation = userInformation;
+
+            return View(articleAndUserVM);
         }
 
         public IActionResult Create()
