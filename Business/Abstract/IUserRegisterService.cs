@@ -9,5 +9,7 @@ namespace Business.Abstract
 {
     public interface IUserRegisterService : IBaseService<UserRegister>
     {
+        UserRegister GetByEmail(string email);
+        UserRegister GetByEmailAndPassword(string email, string password);
     }
 }

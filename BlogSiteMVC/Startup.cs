@@ -36,8 +36,6 @@ namespace BlogSiteMVC
             services.AddSession();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BlogSiteDbConStr")));
 
-            // Buralar deðiþecek.
-
             // Repositories
             services.AddScoped<IArticleRepository, ArticleRepository>();
             services.AddScoped<ITopicRepository, TopicRepository>();

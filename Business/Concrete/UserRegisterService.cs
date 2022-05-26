@@ -34,6 +34,16 @@ namespace Business.Concrete
             return _userRegistersRepository.GetAll();
         }
 
+        public UserRegister GetByEmail(string email)
+        {
+            return _userRegistersRepository.GetByEmail(email);
+        }
+
+        public UserRegister GetByEmailAndPassword(string email, string password)
+        {
+            return _userRegistersRepository.GetByEmailAndPassword(email, password);
+        }
+
         public UserRegister GetById(int id)
         {
             return _userRegistersRepository.GetById(id);

@@ -15,5 +15,15 @@ namespace DataAccess.Repositories
         {
             this.db = db;
         }
+
+        public UserRegister GetByEmail(string email)
+        {
+            return db.UserRegisters.Where(u => u.Email == email).FirstOrDefault();
+        }
+
+        public UserRegister GetByEmailAndPassword(string email, string password)
+        {
+            return db.UserRegisters.Where(u => u.Email == email && u.Password == password).FirstOrDefault();
+        }
     }
 }

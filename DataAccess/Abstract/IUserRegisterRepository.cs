@@ -9,5 +9,7 @@ namespace DataAccess.Abstract
 {
     public interface IUserRegisterRepository : IBaseRepository<UserRegister>
     {
+        UserRegister GetByEmail(string email);
+        UserRegister GetByEmailAndPassword(string email, string password);
     }
 }

@@ -22,11 +22,14 @@ namespace BlogSiteMVC.Models
             CreateMap<ArticleAndUserVM, Article>();
             CreateMap<Article, ArticleAndUserVM>();
 
-            CreateMap<UserInformation, UserInformationVM>();
-            CreateMap<UserInformationVM, UserInformation>();
-
             CreateMap<Topic, TopicAndArticleVM>();
             CreateMap<TopicAndArticleVM, Topic>();
+
+            CreateMap<UserInformation, UserVM>();
+            CreateMap<UserVM, UserInformation>();
+
+            CreateMap<UserRegister, UserVM>();
+            CreateMap<UserVM, UserRegister>();
         }
     }
 }
