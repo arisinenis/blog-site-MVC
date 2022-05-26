@@ -46,9 +46,11 @@ namespace BlogSiteMVC.Controllers
             }
 
             HttpContext.Session.SetString("email", user.Email);
-            if (user.UserInformation.PhotoPath != null)
+            HttpContext.Session.SetString("id", user.Id.ToString());
+            var userInformation = userInformationService.GetById(user.Id);
+            if (userInformation.PhotoPath != null)
             {
-                HttpContext.Session.SetString("photoPath", user.UserInformation.PhotoPath);
+                HttpContext.Session.SetString("photoPath", userInformation.PhotoPath);
             }
 
             return RedirectToAction("Index", "Home");

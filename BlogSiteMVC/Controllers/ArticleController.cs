@@ -2,6 +2,7 @@
 using BlogSiteMVC.Models;
 using Business.Abstract;
 using Core.Concrete;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,14 @@ namespace BlogSiteMVC.Controllers
     {
         private readonly IArticleService articleService;
         private readonly IUserInformationService userInformationService;
+        private readonly ITopicService topicService;
         private readonly IMapper mapper;
 
-        public ArticleController(IArticleService articleService, IMapper mapper, IUserInformationService userInformationService)
+        public ArticleController(IArticleService articleService, IMapper mapper, IUserInformationService userInformationService, ITopicService topicService)
         {
             this.articleService = articleService;
             this.userInformationService = userInformationService;
+            this.topicService = topicService;
             this.mapper = mapper;
         }
 
@@ -38,6 +41,7 @@ namespace BlogSiteMVC.Controllers
         public IActionResult Create()
         {
             ArticleCreateVM articleCreateVM = new ArticleCreateVM();
+            articleCreateVM.Topics = topicService.GetAll();
             return View(articleCreateVM);
         }
 
@@ -45,13 +49,14 @@ namespace BlogSiteMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ArticleCreateVM articleCreateVM)
         {
-            Article article = mapper.Map<Article>(articleCreateVM);
-            article.UserInformationId = 1;
+            //Article article = mapper.Map<Article>(articleCreateVM);
+            Article article = articleCreateVM.Article;
+            article.UserInformationId = Convert.ToInt32(HttpContext.Session.GetString("id"));
             article.Date = DateTime.Now.Date;
 
             if (!ModelState.IsValid)
             {
-                return View(article);
+                return View(articleCreateVM);
             }
 
             articleService.Add(article);

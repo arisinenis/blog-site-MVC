@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace BlogSiteMVC.Models
 {
-    public class TopicAndArticleVM
+    public class TopicVM
     {
-        public TopicAndArticleVM()
-        {
-            Article = new HashSet<Article>();
-        }
         public Topic Topic { get; set; }
-        public ICollection<Article> Article { get; set; }
     }
 }
