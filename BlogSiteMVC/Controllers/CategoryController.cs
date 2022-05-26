@@ -13,9 +13,5 @@ namespace BlogSiteMVC.Controllers
             return View();
         }
 
-        public IActionResult UserCategory()
-        {
-            return View();
-        }
     }
 }

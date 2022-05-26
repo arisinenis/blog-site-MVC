@@ -1,16 +1,18 @@
-﻿@{
+﻿@model ArticleShowMainPageVM;
+
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
-@section Header{
+@*@section Header{
     @await Html.PartialAsync("_VisitorHeaderLayout")
 }
 
 @section Footer{
     @await Html.PartialAsync("_VisitorFooterLayout")
-}
+}*@
 
 <!-- s-content
     ================================================== -->
@@ -21,119 +23,49 @@
 
             <div class="grid-sizer"></div>
 
-            <article class="masonry__brick entry format-standard" data-aos="fade-up">
+            @foreach (var item in Model.Articles)
+            {
+                <article class="masonry__brick entry format-standard" data-aos="fade-up">
 
-                <div class="entry__thumb">
+                    @*<div class="entry__thumb">
                     <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
                         <img src="~/images/thumbs/masonry/lamp-400.jpg"
                              srcset="~/images/thumbs/masonry/lamp-400.jpg 1x, ~/images/thumbs/masonry/lamp-800.jpg 2x"
                              alt="">
                     </a>
-                </div>
+                </div>*@
 
-                <div class="entry__text">
-                    <div class="entry__header">
+                    <div class="entry__text">
+                        <div class="entry__header">
 
-                        <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 15, 2017</a>
+                            <div class="entry__date">
+                                <a asp-controller="Article" asp-action="StandardFormat" asp-route-id ="@item.Id">@item.Date</a>
+                            </div>
+                            <h1 class="entry__title">
+                                <a asp-controller="Article" asp-action="StandardFormat" asp-route-id ="@item.Id">@item.Title</a>
+                            </h1>
+
                         </div>
-                        <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">Just a Standard Format Post.</a>
-                        </h1>
-
-                    </div>
-                    <div class="entry__excerpt">
-                        <p>
-                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                            proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                            incididunt velit sint in aliqua...
-                        </p>
-                    </div>
-                    <div class="entry__meta">
-                        <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Design</a>
-                            <a asp-controller="Category" asp-action="Category">Photography</a>
-                        </span>
-                    </div>
-                </div>
-
-            </article> <!-- end article -->
-
-            <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
-                        <img src="~/images/thumbs/masonry/tulips-400.jpg"
-                             srcset="~/images/thumbs/masonry/tulips-400.jpg 1x, ~/images/thumbs/masonry/tulips-800.jpg 2x"
-                             alt="">
-                    </a>
-                </div>
-
-                <div class="entry__text">
-                    <div class="entry__header">
-
-                        <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 15, 2017</a>
+                        <div class="entry__excerpt">
+                            <p>
+                                @item.Content
+                            </p>
                         </div>
-                        <h1 class="entry__title">
-                            <a asp-controller="Article" asp-action="StandardFormat">
-                                10 Interesting Facts About
-                                Caffeine.
-                            </a>
-                        </h1>
+                        <div class="entry__meta">
+                            <span class="entry__meta-links">
+                                @* Topiclere bakılacak. *@
+                                @foreach (var topic in item.Topics)
+                                {
+                                    <a asp-controller="Category" asp-action="Category" asp-route-id ="@topic.Id">@topic.Name</a>
+                                }
 
-                    </div>
-                    <div class="entry__excerpt">
-                        <p>
-                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                            proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                            incididunt velit sint in aliqua...
-                        </p>
-                    </div>
-                    <div class="entry__meta">
-                        <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Health</a>
-                        </span>
-                    </div>
-                </div>
-
-            </article> <!-- end article -->
-
-            <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                <div class="entry__thumb">
-                    <a asp-controller="Article" asp-action="StandardFormat" class="entry__thumb-link">
-                        <img src="~/images/thumbs/masonry/cookies-400.jpg"
-                             srcset="~/images/thumbs/masonry/cookies-400.jpg 1x, ~/images/thumbs/masonry/cookies-800.jpg 2x"
-                             alt="">
-                    </a>
-                </div>
-
-                <div class="entry__text">
-                    <div class="entry__header">
-
-                        <div class="entry__date">
-                            <a asp-controller="Article" asp-action="StandardFormat">December 10, 2017</a>
+                            </span>
                         </div>
-                        <h1 class="entry__title"><a asp-controller="Article" asp-action="StandardFormat">No Sugar Oatmeal Cookies.</a></h1>
+                    </div>
 
-                    </div>
-                    <div class="entry__excerpt">
-                        <p>
-                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit
-                            proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute
-                            incididunt velit sint in aliqua...
-                        </p>
-                    </div>
-                    <div class="entry__meta">
-                        <span class="entry__meta-links">
-                            <a asp-controller="Category" asp-action="Category">Cooking</a>
-                            <a asp-controller="Category" asp-action="Category">Health</a>
-                        </span>
-                    </div>
-                </div>
+                </article> <!-- end article -->
+            }
 
-            </article> <!-- end article -->
         </div> <!-- end masonry -->
     </div> <!-- end masonry-wrap -->
 

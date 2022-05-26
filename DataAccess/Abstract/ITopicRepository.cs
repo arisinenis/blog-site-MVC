@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    interface ITopicRepository : IBaseRepository<Topic>
+    public interface ITopicRepository : IBaseRepository<Topic>
     {
-        
+        Topic GetTopicIncludeArticles(int id);
     }
 }

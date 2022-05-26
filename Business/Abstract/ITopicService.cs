@@ -9,5 +9,6 @@ namespace Business.Abstract
 {
     public interface ITopicService : IBaseService<Topic>
     {
+        Topic GetTopicIncludeArticles(int id);
     }
 }

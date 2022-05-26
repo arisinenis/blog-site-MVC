@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Core.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Context;
 using DataAccess.Repositories;
 using System;
@@ -12,41 +13,47 @@ namespace Business.Concrete
 {
     public class ArticleService : IArticleService
     {
-        private readonly AppDbContext db;
-        ArticleRepository _articleRepository;
-        public ArticleService()
+        private readonly IArticleRepository articleRepository;
+
+        public ArticleService(IArticleRepository articleRepository)
         {
-            _articleRepository = new ArticleRepository(db);
+            this.articleRepository = articleRepository;
+
         }
 
         public bool Add(Article entity)
         {
-            return _articleRepository.Add(entity);
+            return articleRepository.Add(entity);
         }
 
         public bool Delete(Article entity)
         {
-            return _articleRepository.Delete(entity);
+            return articleRepository.Delete(entity);
         }
 
         public IEnumerable<Article> GetAll()
         {
-            return _articleRepository.GetAll();
+            return articleRepository.GetAll();
         }
 
         public Article GetArticleIncludeUser(int id)
         {
-            return _articleRepository.GetArticleIncludeUser(id);
+            return articleRepository.GetArticleIncludeUser(id);
+        }
+
+        public IEnumerable<Article> GetArticlesIncludeTopics()
+        {
+            return articleRepository.GetArticlesIncludeTopics();
         }
 
         public Article GetById(int id)
         {
-            return _articleRepository.GetById(id);
+            return articleRepository.GetById(id);
         }
 
         public bool Update(Article entity)
         {
-            return _articleRepository.Update(entity);
+            return articleRepository.Update(entity);
         }
     }
 }

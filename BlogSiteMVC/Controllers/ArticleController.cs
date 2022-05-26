@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using BlogSiteMVC.Models;
+using Business.Abstract;
+using Core.Concrete;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,18 +12,50 @@ namespace BlogSiteMVC.Controllers
 {
     public class ArticleController : Controller
     {
-        public IActionResult StandardFormat()
+        private readonly IArticleService articleService;
+        private readonly IUserInformationService userInformationService;
+        private readonly IMapper mapper;
+
+        public ArticleController(IArticleService articleService, IMapper mapper, IUserInformationService userInformationService)
         {
-            return View();
-        }
-        public IActionResult UserStandardFormat()
-        {
-            return View();
+            this.articleService = articleService;
+            this.userInformationService = userInformationService;
+            this.mapper = mapper;
         }
 
-        public IActionResult WriteArticle()
+        public IActionResult StandardFormat(int id)
         {
-            return View();
+            ArticleAndUserVM articleAndUserVM = new ArticleAndUserVM();
+            Article article = mapper.Map<Article>(articleAndUserVM);
+
+            articleAndUserVM.Article = articleService.GetArticleIncludeUser(id);
+            UserInformation userInformation = userInformationService.GetById(articleAndUserVM.Article.UserInformationId);
+            articleAndUserVM.UserInformation = userInformation;
+
+            return View(articleAndUserVM);
+        }
+
+        public IActionResult Create()
+        {
+            ArticleCreateVM articleCreateVM = new ArticleCreateVM();
+            return View(articleCreateVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(ArticleCreateVM articleCreateVM)
+        {
+            Article article = mapper.Map<Article>(articleCreateVM);
+            article.UserInformationId = 1;
+            article.Date = DateTime.Now.Date;
+
+            if (!ModelState.IsValid)
+            {
+                return View(article);
+            }
+
+            articleService.Add(article);
+            return RedirectToAction(nameof(Index), nameof(User));
         }
     }
 }

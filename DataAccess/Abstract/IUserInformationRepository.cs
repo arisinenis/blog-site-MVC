@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    interface IUserInformationRepository : IBaseRepository<UserInformation>
+    public interface IUserInformationRepository : IBaseRepository<UserInformation>
     {
         IEnumerable<UserInformation> GetAllWithArticles();
     }

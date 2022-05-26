@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    interface IBaseRepository<T> 
+    public interface IBaseRepository<T> 
         where T : class
     {
         IEnumerable<T> GetAll();

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model UserRegisterVM
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,7 +38,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
 
 
 
@@ -45,25 +48,23 @@
     <header>
         <h1 class="main-header">exception.</h1>
         <p>Discover your future !</p>
-        <p class="info-p">Enter your email address. We will send a link to your email address.</p>
+        @*<p class="info-p">Enter your email address. We will send a link to your email address.</p>*@
     </header>
 
-    <form>
-        <!-- Email input -->
-        <div class="container">
+    <form asp-action="Login" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger">@ViewBag.ErrorMessage</div>
 
-            <div class="form-outline mb-4 input-div">
-                <label class="email-text" for="text">Email</label>
-                <input type="email" id="form1Example1" class="form-control" />
-                <button type="submit" class="btn btn-primary btn-block btn-activation">Send Link</button>
-            </div>
-
-            <!-- <div class="btn-submit">
-                <button type="submit" class="btn btn-primary btn-block">Send Activation Link</button>
-            </div> -->
-
+        <div class="form-outline mb-4 input-div">
+            <label asp-for="UserRegister.Email" class="email-text" for="text">Email</label>
+            <input asp-for="UserRegister.Email" type="email" id="form1Example1" class="form-control" />
+            <span asp-validation-for="UserRegister.Email" class="text-danger"></span>
         </div>
-
+        <div class="form-outline mb-4 input-div">
+            <label asp-for="UserRegister.Password" class="email-text" for="text">Password</label>
+            <input asp-for="UserRegister.Password" type="email" id="form1Example1" class="form-control" />
+            <span asp-validation-for="UserRegister.Password" class="text-danger"></span>
+        </div>
+        <input type="submit" value="Login" class="btn btn-primary btn-block btn-activation" />
     </form>
 
     <!-- Form End -->

@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Core.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Context;
 using DataAccess.Repositories;
 using System;
@@ -10,13 +11,12 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class UserRegisterService : IBaseService<UserRegister>
+    public class UserRegisterService : IUserRegisterService
     {
-        private readonly AppDbContext db;
-        UserRegisterRepository _userRegistersRepository;
-        public UserRegisterService()
+        private readonly IUserRegisterRepository _userRegistersRepository;
+        public UserRegisterService(IUserRegisterRepository _userRegistersRepository)
         {
-            _userRegistersRepository = new UserRegisterRepository(db);
+            this._userRegistersRepository = _userRegistersRepository;
         }
 
         public bool Add(UserRegister entity)
@@ -32,6 +32,16 @@ namespace Business.Concrete
         public IEnumerable<UserRegister> GetAll()
         {
             return _userRegistersRepository.GetAll();
+        }
+
+        public UserRegister GetByEmail(string email)
+        {
+            return _userRegistersRepository.GetByEmail(email);
+        }
+
+        public UserRegister GetByEmailAndPassword(string email, string password)
+        {
+            return _userRegistersRepository.GetByEmailAndPassword(email, password);
         }
 
         public UserRegister GetById(int id)

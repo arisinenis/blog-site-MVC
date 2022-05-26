@@ -1,5 +1,10 @@
 using BlogSiteMVC.Models;
+using Business.Abstract;
+using Business.Concrete;
+using Core.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Context;
+using DataAccess.Repositories;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,10 +31,23 @@ namespace BlogSiteMVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-            // Validation resultlar ModelState getirecek.
             services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
+            services.AddAutoMapper(typeof(Startup));
+            services.AddSession();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BlogSiteDbConStr")));
+
+            // Repositories
+            services.AddScoped<IArticleRepository, ArticleRepository>();
+            services.AddScoped<ITopicRepository, TopicRepository>();
+            services.AddScoped<IUserInformationRepository, UserInformationRepository>();
+            services.AddScoped<IUserRegisterRepository, UserRegisterRepository>();
+
+            //// Services
+            services.AddScoped<IUserRegisterService, UserRegisterService>();
+            services.AddScoped<IUserInformationService, UserInformationService>();
+            services.AddScoped<IArticleService, ArticleService>();
+            services.AddScoped<ITopicService, TopicService>();
+  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +61,9 @@ namespace BlogSiteMVC
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseSession();
+
             app.UseStaticFiles();
 
             app.UseRouting();
