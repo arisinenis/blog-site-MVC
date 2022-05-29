@@ -49,8 +49,7 @@ namespace BlogSiteMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ArticleCreateVM articleCreateVM)
         {
-            //Article article = mapper.Map<Article>(articleCreateVM);
-            Article article = articleCreateVM.Article;
+            Article article = mapper.Map<Article>(articleCreateVM);
             article.UserInformationId = Convert.ToInt32(HttpContext.Session.GetString("id"));
             article.Date = DateTime.Now.Date;
 

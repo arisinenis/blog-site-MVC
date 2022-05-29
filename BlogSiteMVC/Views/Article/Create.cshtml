@@ -34,12 +34,8 @@
 
             @* ?????????????????? *@
             @*<div class="tag-section">
-                <select id="topicArticle">
-                   @foreach (var item in Model.Topics)
-                   {
-                       <option asp-for="Article.Topic" value=@item.Id asp-route-id=@item.Id>@item.Name</option>
-                   }
-
+                <select id="topicArticle" asp-items="@Model.Topics">
+                    <option asp-for="Article.Topic" value=@item.Id asp-route-id=@item.Id>@item.Name</option>
                 </select>
                 
                 <ul id="list-tag">
@@ -47,19 +43,19 @@
             </div>*@
 
             <div class="title-section">
-                <input asp-for="Article.Title" type="text" placeholder="Title" id="article-title">
-                <span asp-validation-for="Article.Title" class="text-danger"></span>
+                <input asp-for="Title" type="text" placeholder="Title" id="article-title">
+                <span asp-validation-for="Title" class="text-danger"></span>
             </div>
 
             <div class="text-section">
-                <textarea asp-for="Article.Content" name="" id="article-content" cols="30" rows="50" placeholder="Content"></textarea>
-                <span asp-validation-for="Article.Content" class="text-danger"></span>
+                <textarea asp-for="Content" name="Content" id="article-content" cols="30" rows="50" placeholder="Content"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
             </div>
 
             <div class="text-section">
-                <label asp-for="Article.TotalReadingTime" for="quantity" class="total-time">Total Reading Time:</label>
-                <input asp-for="Article.TotalReadingTime" type="number" id="quantity" name="quantity" min="1" max="100" class="nud">
-                <span asp-validation-for="Article.TotalReadingTime" class="text-danger"></span>
+                <label asp-for="TotalReadingTime" for="quantity" class="total-time">Total Reading Time:</label>
+                <input asp-for="TotalReadingTime" type="number" inputmode="numeric" step="1" id="quantity" name="quantityNud" min="1" max="100" class="nud">
+                <span asp-validation-for="TotalReadingTime" class="text-danger"></span>
             </div>
 
             <a asp-controller="User" asp-action="Index">Back to Mainpage</a>
